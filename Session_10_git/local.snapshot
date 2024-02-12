@@ -29,7 +29,89 @@
           "y" : -176.0
         },
         "processGroups" : [ ],
-        "processors" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "2.0.0-M2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "ac3f3d27-7176-30ab-9d2b-314b12b3ff4f",
+          "identifier" : "66d98624-d334-3559-aab7-9af8931db706",
+          "instanceIdentifier" : "9d824b77-018d-1000-202f-a4fd9fad159b",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributesToCSV",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 710.0,
+            "y" : 155.0
+          },
+          "properties" : {
+            "null-value" : "false",
+            "include-core-attributes" : "true",
+            "destination" : "flowfile-attribute",
+            "include-schema" : "false"
+          },
+          "propertyDescriptors" : {
+            "null-value" : {
+              "displayName" : "Null Value",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "null-value",
+              "sensitive" : false
+            },
+            "include-core-attributes" : {
+              "displayName" : "Include Core Attributes",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "include-core-attributes",
+              "sensitive" : false
+            },
+            "attributes-regex" : {
+              "displayName" : "Attributes Regular Expression",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "attributes-regex",
+              "sensitive" : false
+            },
+            "destination" : {
+              "displayName" : "Destination",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "destination",
+              "sensitive" : false
+            },
+            "include-schema" : {
+              "displayName" : "Include Schema",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "include-schema",
+              "sensitive" : false
+            },
+            "attribute-list" : {
+              "displayName" : "Attribute List",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "attribute-list",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+          "yieldDuration" : "1 sec"
+        } ],
         "remoteProcessGroups" : [ ],
         "scheduledState" : "ENABLED",
         "statelessFlowTimeout" : "1 min"
